@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fuente externa (Inter y Poppins) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Importo una libreria de iconos provenientes de BOXICONS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Mi presentación</title>
+</head>
+<body>
+    <main class="layout-principal" id="inicio">
+        <nav class="nav">
+            <div class="nav__contenedor contenedor">
+                <strong class="nav__nombre">José Felipe Pérez Hernández</strong>
+    
+                <label for="menu" class="nav__menu">
+                    <img src="./assets/menu.svg" class="nav__img">
+                </label>
+                <input type="checkbox" id="menu" class="nav__input">
+
+                <ul class="lista">
+                    <li class="lista__item"><a href="#principal" class="lista__link">Principal</a></li>
+                    <li class="lista__item"><a href="#videos" class="lista__link">Videos</a></li>
+                    <li class="lista__item"><a href="#fotos" class="lista__link">Fotos</a></li>
+                    <li class="lista__item"><a href="#estudios" class="lista__link">Estudios</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <section class="contenedor contenedor__contenido">
+            <!-- Columna lateral -->
+            <aside class="columna">
+                <strong class="columna__titulo">Mi información de contacto: </strong>
+
+                <blockquote><strong>Celular: </strong>2714562231</blockquote>
+                <blockquote><strong>Correo: </strong>felipepz2626@gmail.com</blockquote>
+                <blockquote><strong>Domicilio: </strong>CONOCIDO</blockquote>
+
+                <div class="columna__social">
+                    <a href="https://www.facebook.com/profile.php?id=100014648567340" target="_blank" class="columna__enlace">
+                        <i class='bx bxl-facebook columna__icono'></i>
+                    </a>
+                    <a href="https://www.instagram.com/felipe031103/?hl=es-la" target="_blank" class="columna__enlace">
+                        <i class='bx bxl-instagram columna__icono'></i>
+                    </a>
+                </div>
+            </aside>
+
+            <div class="contenedor__articulos">
+                <article class="articulo" id="principal">
+                    <header class="articulo__cabecera">
+                        <hgroup>
+                            <h2 class="articulo__titulo">Un poco sobre mi</h2>
+                            <h3 class="articulo__subtitulo">Información general</h3>
+                        </hgroup>
+                    </header>
+    
+                    <p class="articulo__parrafo">¡Hola! me llamo Felipe, soy estudiante de la carrera de Ingeniería en Sistemas Computacionales, una de las razones por las cuales decidí entrar a esta carrera, fue la motivación de poder desarrollar aplicaciones y también para poder continuar mis estudios sobre la programación. A continuación muestro un pequeño video de presentación sobre mi: </p>
+
+                    <footer class="articulo__pie">
+                        <time datetime="2024-03-04" pubdate>publicado el 4 de marzo de 2024.</time>
+                        <span class="articulo__comentarios">Comentarios (0)</span>
+                    </footer>
+                </article>
+
+                <article class="articulo" id="videos">
+                    <header class="articulo__cabecera">
+                        <hgroup>
+                            <h2 class="articulo__titulo">Videos</h2>
+                            <h3 class="articulo__subtitulo">Video presentación</h3>
+                        </hgroup>
+                    </header>
+    
+                    <p class="articulo__parrafo">A continuación, muestro un video en donde hago una pequeña presentación sobre mi y un poco de mis fuertes en el area del desarrollo web: </p>
+
+                    <video src="./media/miVideo.mp4" class="articulo__video" controls></video>
+                
+                    <footer class="articulo__pie">
+                        <time datetime="2024-03-04" pubdate>publicado el 4 de marzo de 2024.</time>
+                        <span class="articulo__comentarios">Comentarios (0)</span>
+                    </footer>
+                </article>
+
+                <article class="articulo" id="fotos">
+                    <header class="articulo__cabecera">
+                        <hgroup>
+                            <h2 class="articulo__titulo">Fotografías</h2>
+                            <h3 class="articulo__subtitulo">Mis Fotografías</h3>
+                        </hgroup>
+                    </header>
+    
+                    <p class="articulo__parrafo">Al igual que con el video, también muestro algunas fotografías sobre mi:</p>
+                    
+                    <div class="layout">
+                        <img src="./img/FelipePerez.jpg" alt="José Felipe Pérez Hernández" class="layout__img">
+                        <img src="./img/FelipePerez-imagen2.jpg" alt="José Felipe Pérez Hernández" class="layout__img">
+                    </div>
+
+                    <footer class="articulo__pie">
+                        <time datetime="2024-03-04" pubdate>publicado el 4 de marzo de 2024.</time>
+                        <span class="articulo__comentarios">Comentarios (0)</span>
+                    </footer>
+                </article>
+
+                <article class="articulo" id="estudios">
+                    <header class="articulo__cabecera">
+                        <hgroup>
+                            <h2 class="articulo__titulo">Estudios</h2>
+                            <h3 class="articulo__subtitulo">La escuela donde curso la carrera</h3>
+                        </hgroup>
+                    </header>
+    
+                    <p class="articulo__parrafo">Como mencioné anteriormente, soy estudiante de Ingeniería en Sistemas Computacionales, y estoy cursando esa carrera desde el año 2021, me toco casí la ultima etapa de la pandemia, en donde el retorno a clases presenciales era escalonado, ya que en primer y segundo semestre me toco estar en clases en línea. Ahora ya estoy en 6to semestre y hasta ahora mi experiencia dentro de la escuela ha sido buena, conoci amigos y reforze conocimientos en temas de programación, la ubicación del plantel es la siguiente:</p>
+
+                    <div class="articulo__mapa">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2669.8442045226407!2d-97.10213025462448!3d18.854674540800442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c502aeb2d35fed%3A0xba5f3840b0862949!2sTecNM%20-%20Campus%20Orizaba!5e0!3m2!1ses-419!2smx!4v1709639653977!5m2!1ses-419!2smx" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                
+                    <footer class="articulo__pie">
+                        <time datetime="2024-03-04" pubdate>publicado el 4 de marzo de 2024.</time>
+                        <span class="articulo__comentarios">Comentarios (0)</span>
+                    </footer>
+                </article>
+            </div>
+        </section>
+
+        <footer class="contenedor pie">
+            Derechos Reservados &copy; 2024-2025.
+            <address>
+                <a href="http://www.itorizaba.edu.mx">ITO</a>
+            </address>
+        </footer>
+    </main>
+
+    <a href="#inicio" class="direccion"><i class='bx bx-up-arrow-alt'></i></a>
+</body>
+</html>

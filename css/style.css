@@ -1,0 +1,299 @@
+/* La pseudoclase root permite manejar el nodo principal de un documento, en html ":root" es igual a decir "html", la ventaja es que :root tiene mayor prioridad */
+:root {
+    /* Paleta de colores */
+    --color-blanco: #ffffff;
+    --color-gris-01: #e1e1e1;
+    --color-gris-02: #F5F5F5;
+    --color-gris-03: #efefef;
+    --color-gris-04: #e9edf8;
+    --color-negro-01: #212121;
+    --color-negro-02: #525151;
+    --color-azul-01: #00175a;
+    --color-azul-02: #002db3;
+    --color-azul-03: #3357c2;
+    --color-azul-bajo-01: #ccd5f0;
+    --color-azul-bajo-02: #e6eaf7;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1250px;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.layout-principal {
+    display: grid;
+    grid-template-rows: 80px 1fr 90px;
+    gap: 15px;
+}
+
+/* Cabecera de mi página */
+.nav {
+    height: 80px;
+    border-bottom: 1px solid var(--color-gris-01);
+}
+
+.nav__contenedor {
+    height: 100%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.nav__nombre {
+    color: #f45959;
+    font-weight: 500;
+}
+
+.nav__menu, .nav__input {
+    margin-left: auto;
+    cursor: pointer;
+    display: none;
+}
+
+.lista {
+    margin-left: auto;
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+
+.lista__link {
+    padding: 0.7rem 1.1rem;
+    font-size: .9rem;
+    color: var(--color-negro-01);
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+
+    transition: background-color .5s, color .5s;
+}
+
+.lista__link:hover {
+    background-color: var(--color-azul-bajo-02);
+    color: var(--color-azul-02);
+}
+
+/* Contenido de mi página */
+.contenedor__contenido {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 15px;
+}
+
+.columna {
+    background-color: var(--color-gris-04);
+    color: var(--color-negro-01);
+    border-radius: 5px;
+    padding: 25px 30px;
+}
+
+strong {
+    display: block;
+    font-weight: 600;
+}
+
+.columna__titulo {
+    color: var(--color-negro-01);
+    margin-bottom: 20px;
+    font-size: .9em;
+}
+
+blockquote {
+    margin-bottom: 15px;
+    font-weight: 500;
+    font-size: .9rem;
+    color: var(--color-azul-02);
+}
+
+.columna__social {
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;
+}
+
+.columna__enlace {
+    color: var(--color-gris-04);
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-negro-01);
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+.columna__enlace:hover {
+    background-color: var(--color-negro-02);
+}
+
+.columna__icono {
+    margin: auto;
+    font-size: 1.4rem;
+}
+
+/* Articulos */
+.contenedor__articulos {
+    display: grid;
+    grid-auto-rows: max-content;
+    gap: 15px;
+}
+
+.articulo {
+    width: 100%;
+    border: 2px dashed var(--color-azul-02);
+    padding: 35px;
+    border-radius: 5px;
+    color: var(--color-azul-01);
+}
+
+.articulo__titulo {
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+.articulo__subtitulo {
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.articulo__parrafo {
+    margin: 20px 0;
+    text-align: justify;
+    line-height: 1.3;
+    font-size: 0.9rem;
+}
+
+.articulo__video {
+    width: 45%;
+    border: 1px solid var(--color-azul-03);
+    border-radius: 15px;
+}
+
+.layout {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), auto));
+    grid-auto-flow: row;
+}
+
+.layout__img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+    border: 1px solid var(--color-azul-03);
+}
+
+.articulo__pie {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--color-azul-02);
+}
+
+.articulo__mapa {
+    width: 60%;
+    height: 350px;
+    overflow: hidden;
+    border: 1px solid var(--color-azul-03);
+    border-radius: 15px;
+}
+
+/* Footer */
+.pie {
+    display: flex;
+    padding: 0 30px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--color-gris-01);
+    border-radius: 5px;
+}
+
+address {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+/* Boton para ir hacia arriba */
+.direccion {
+    display: inline-flex;
+    position: fixed;
+    bottom: 30px;
+    right: 40px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background-color: var(--color-azul-02);
+    border: 2px solid var(--color-azul-02);
+    color: var(--color-gris-04);
+    font-size: 1.5rem;
+    
+    transition: background-color .5s, color .5s;
+}
+
+.direccion:hover {
+    background-color: var(--color-azul-bajo-02);
+    color: var(--color-azul-02);
+}
+
+/* Responsivo */
+@media screen and (max-width: 940px){
+    .contenedor__contenido { grid-template-columns: 1fr; }
+}
+
+@media screen and (max-width: 750px){
+    .nav__menu { 
+        display: block;
+        z-index: 10;
+        position: sticky;
+        top: 0;
+    }
+
+    .lista {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--color-blanco);
+        z-index: 9;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity .5s;
+    }
+
+    .nav__input:checked + .lista {
+        opacity: 1;
+        pointer-events: unset;
+    }
+
+    .lista__link:target {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+@media screen and (max-width: 620px){
+    .articulo__video, .articulo__mapa { width: 100%;}
+}
